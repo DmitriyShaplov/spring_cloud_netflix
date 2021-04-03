@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 @Data
 @Builder
 @AllArgsConstructor
-@Document(collation = "buckets")
+@Document(collection = "buckets")
 public class Bucket {
 
     @Id

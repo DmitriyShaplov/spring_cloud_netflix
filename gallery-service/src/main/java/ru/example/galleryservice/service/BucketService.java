@@ -1,19 +1,14 @@
 package ru.example.galleryservice.service;
 
-import com.mongodb.DuplicateKeyException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import ru.example.galleryservice.exception.BucketNotFoundException;
 import ru.example.galleryservice.model.Bucket;
-import ru.example.galleryservice.payload.ErrorResponse;
 import ru.example.galleryservice.repository.BucketRepository;
 
 import javax.validation.Valid;
