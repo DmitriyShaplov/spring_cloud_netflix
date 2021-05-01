@@ -4,11 +4,12 @@ management:
       exposure:
         include: hystrix.stream
 
-#movie-service:
-#  ribbon:
-#    eureka:
-#      enabled: true
-#    ServerListRefreshInterval: 1000
+#для балансировки нагрузки при запросах в movie сервис при рибоне
+movie-service:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 1000
 
 #movie-service:
 #  ribbon:
