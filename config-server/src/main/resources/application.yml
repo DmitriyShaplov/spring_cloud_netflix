@@ -1,0 +1,28 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+
+---
+spring:
+  profiles: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "file:///D:/projects/sprint_cloud_netflix/config-properties/{application}/{profile}"
+
+---
+spring:
+  profiles: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DmitriyShaplov/spring_cloud_netflix
+          search-paths:
+            - "config-properties/{application}/{profile}"

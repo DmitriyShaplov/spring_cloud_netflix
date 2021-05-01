@@ -1,6 +1,11 @@
 spring:
   application:
     name: zuul-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
 
 server:
   port: 8766
@@ -11,21 +16,3 @@ eureka:
       default-zone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     prefer-ip-address: true
-
-zuul:
-  routes:
-    auth-service:
-      strip-prefix: false
-      sensitive-headers: Cookie,Set-Cookie
-      path: /auth/**
-      service-id: auth-service
-    gallery-service:
-      path: /gallery/**
-      service-id: gallery-service
-    user-service:
-      path: /users/**
-      service-id: user-service
-  ignored-services: '*'
-  host:
-    socket-timeout-millis: 60000
-    connect-timeout-millis: 60000 #important

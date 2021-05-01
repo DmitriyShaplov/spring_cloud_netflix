@@ -1,0 +1,17 @@
+zuul:
+  routes:
+    auth-service:
+      strip-prefix: false
+      sensitive-headers: Cookie,Set-Cookie
+      path: /auth/**
+      service-id: auth-service
+    gallery-service:
+      path: /gallery/**
+      service-id: gallery-service
+    user-service:
+      path: /users/**
+      service-id: user-service
+  ignored-services: '*'
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000 #important

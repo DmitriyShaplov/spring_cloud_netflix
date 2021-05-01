@@ -1,0 +1,29 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+#movie-service:
+#  ribbon:
+#    eureka:
+#      enabled: true
+#    ServerListRefreshInterval: 1000
+
+#movie-service:
+#  ribbon:
+#    listOfServers: localhost:8085,localhost:8086
+#    eureka:
+#      enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/gallerydb
+#  zipkin:
+#    baseUrl: http://localhost:9411/
+#  sleuth:
+#    sampler:
+#      probability: 100
