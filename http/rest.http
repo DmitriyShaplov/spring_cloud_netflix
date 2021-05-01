@@ -1,0 +1,11 @@
+POST localhost:8766/auth
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+###
+GET localhost:8766/gallery/stream/buckets/default
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNjE5ODkwOTAxLCJleHAiOjE2MTk5NzczMDF9.3-GbPIY2DKdM2lhKF35ZIjLg9c5kRzpJmv_d1spydo5kBz-AfLVHp_dw-znXkn0PYYSTQ_YlpZYy9M0v-_Payw
