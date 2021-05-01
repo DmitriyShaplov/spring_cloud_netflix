@@ -1,6 +1,6 @@
 spring:
   application:
-    name: user-service
+    name: movie-service
   cloud:
     config:
       discovery:

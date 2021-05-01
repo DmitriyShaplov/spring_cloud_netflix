@@ -16,6 +16,7 @@
         <module>zool-service</module>
         <module>auth-service</module>
         <module>config-server</module>
+        <module>movie-service</module>
     </modules>
 
     <parent>
