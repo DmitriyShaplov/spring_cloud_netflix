@@ -2,7 +2,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
 
 #для балансировки нагрузки при запросах в movie сервис при рибоне
 movie-service:
