@@ -25,6 +25,7 @@ public class BucketController {
 
     private final BucketService bucketService;
 
+    @RequestMapping("/")
     public String home() {
         String home = "Gallery-Service running at port: " + env.getProperty("local.server.port");
         log.info(home);

@@ -1,10 +1,5 @@
-POST localhost:8766/auth
+GET localhost:8080/
 Content-Type: application/json
-
-{
-  "username": "admin",
-  "password": "admin"
-}
 
 ###
 GET localhost:8766/gallery/stream/buckets/default

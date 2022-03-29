@@ -7,6 +7,13 @@ hystrix:
   dashboard:
     proxy-stream-allow-list: "*"
 
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 100
+
 #для балансировки нагрузки при запросах в movie сервис при рибоне
 movie-service:
   ribbon:

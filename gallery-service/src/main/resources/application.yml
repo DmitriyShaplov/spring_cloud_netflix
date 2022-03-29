@@ -15,6 +15,11 @@
 spring:
   application:
     name: gallery-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server
 #  data:
 #    mongodb:
 #      uri: mongodb://localhost:27017/gallerydb
@@ -27,8 +32,8 @@ eureka:
   client:
     fetchRegistry: true
     serviceUrl:
-      #      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-      defaultZone: http://my-eureka-server-us.com:9001/eureka
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+#      defaultZone: http://my-eureka-server-us.com:9001/eureka
   instance:
     preferIpAddress: true
     appname: gallery-service  # ==> This is a instance of ABC-SERVICE
